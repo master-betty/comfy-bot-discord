@@ -16,7 +16,8 @@ async def on_ready():
 
 @bot.command()
 async def test(ctx):
-    await ctx.send("-test")
+    member_object = message.server.get_member_named('master-betty')
+    await ctx.send(member_object.mention + " test complete")
 
 @bot.command()
 async def greet(ctx):
@@ -32,7 +33,8 @@ async def boo(ctx):
 
 @bot.command()
 async def boosef(ctx):
-    await ctx.send("@Sefyu#9231 https://www.youtube.com/watch?v=4Ds-oqOjUog")
+    member_object = message.server.get_member_named('Sefyu')
+    await ctx.send(member_object.mention + " https://www.youtube.com/watch?v=4Ds-oqOjUog")
 
 @bot.command()
 async def info(ctx):
