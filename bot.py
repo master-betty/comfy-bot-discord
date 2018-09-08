@@ -15,6 +15,10 @@ async def on_ready():
     print('------')
 
 @bot.command()
+async def test(ctx):
+    await ctx.send("-test")
+
+@bot.command()
 async def greet(ctx):
     await ctx.send(":smiley: :wave: Hello, there!")
 
