@@ -1,7 +1,11 @@
 import discord
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='-')
+cmdPrefix = '-'
+bot = commands.Bot(command_prefix=cmdPrefix)
+
+botTitle = "Comfy Bot"
+botDescription = "Get comfy, have some coffee. Don't be straight"
 
 @bot.event
 async def on_ready():
@@ -24,7 +28,7 @@ async def boo(ctx):
 
 @bot.command()
 async def info(ctx):
-    embed = discord.Embed(title="Comfy Bot", description="Dont be straight", color=0xeee657)
+    embed = discord.Embed(title="Comfy Bot", description=botDescription, color=0xeee657)
     
     # give info about you here
     embed.add_field(name="Author", value="master-betty")
@@ -41,14 +45,13 @@ bot.remove_command('help')
 
 @bot.command()
 async def help(ctx):
-    embed = discord.Embed(title="nice bot", description="A Very Nice bot. List of commands are:", color=0xeee657)
+    embed = discord.Embed(title=botTitle, description="Get Comfy. List of commands are:", color=0xeee657)
 
-    embed.add_field(name="-", value="Prefix to call bot", inline=False)
-    embed.add_field(name="cat", value="Its a cat", inline=False)
-    embed.add_field(name="boo", value="Almost scares you", inline=False)
-    embed.add_field(name="greet", value="Gives a nice greet message", inline=False)
-    embed.add_field(name="info", value="Gives a little info about the bot", inline=False)
-    embed.add_field(name="help", value="Gives this message", inline=False)
+    embed.add_field(name=(cmdPrefix + "cat"), value="Its a cat", inline=False)
+    embed.add_field(name=(cmdPrefix + "boo"), value="Almost scares you", inline=False)
+    embed.add_field(name=(cmdPrefix + "greet"), value="Gives a nice greet message", inline=False)
+    embed.add_field(name=(cmdPrefix + "info"), value="Gives a little info about the bot", inline=False)
+    embed.add_field(name=(cmdPrefix + "help"), value="Gives this message", inline=False)
 
     await ctx.send(embed=embed)
 
