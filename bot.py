@@ -18,7 +18,7 @@ async def on_ready():
 async def test(ctx):
 	#105043765512679424
     myid = '<@105032168501198848>'
-    await client.send_message(message.channel, ' : %s testing  ' % myid)
+    await ctx.send('testing  ' + myid)
 
 @bot.command()
 async def greet(ctx):
