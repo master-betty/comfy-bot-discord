@@ -16,8 +16,9 @@ async def on_ready():
 
 @bot.command()
 async def test(ctx):
-    member_object = server.get_member_named('master-betty')
-    await ctx.send(member_object.mention + " test complete")
+	#105043765512679424
+    myid = '<@105032168501198848>'
+    await client.send_message(message.channel, ' : %s testing  ' % myid)
 
 @bot.command()
 async def greet(ctx):
