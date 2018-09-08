@@ -45,10 +45,14 @@ async def flip(ctx):
     flip = random.randint(0, 1)
     if (flip == 0):
         result = "Heads"
-    else:
+    elif (flip == 1):
         result = "Tails"
 
-    await ctx.send(flip)
+    await ctx.send(result)
+
+@bot.command()
+async def diesel(ctx):
+    await ctx.send('https://s1.webmshare.com/jRdK6.webm')
 
 @bot.command()
 async def info(ctx):
@@ -71,10 +75,11 @@ bot.remove_command('help')
 async def help(ctx):
     embed = discord.Embed(title=botTitle, description="Get Comfy. List of commands are:", color=0xeee657)
 
+    embed.add_field(name=(cmdPrefix + "greet"), value="Gives a nice greet message", inline=False)
     embed.add_field(name=(cmdPrefix + "cat"), value="Its a cat", inline=False)
     embed.add_field(name=(cmdPrefix + "boo"), value="Almost scares you", inline=False)
-    embed.add_field(name=(cmdPrefix + "boosef"), value=";)", inline=False)
-    embed.add_field(name=(cmdPrefix + "greet"), value="Gives a nice greet message", inline=False)
+    embed.add_field(name=(cmdPrefix + "boosef"), value="Almost scares him", inline=False)
+    embed.add_field(name=(cmdPrefix + "diesel"), value="Gets his fuck on", inline=False)
     embed.add_field(name=(cmdPrefix + "flip"), value="Heads or tails?", inline=False)
     embed.add_field(name=(cmdPrefix + "info"), value="Gives a little info about the bot", inline=False)
     embed.add_field(name=(cmdPrefix + "help"), value="Gives this message", inline=False)
