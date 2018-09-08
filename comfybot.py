@@ -41,16 +41,14 @@ async def boosef(ctx):
 
 @bot.command()
 async def flip(ctx):
-
     result = 'ERROR'
-
     flip = random.randint(0, 1)
     if (flip == 0):
         result = "Heads"
     else:
         result = "Tails"
 
-    await ctx.send(result)
+    await ctx.send(flip)
 
 @bot.command()
 async def info(ctx):
