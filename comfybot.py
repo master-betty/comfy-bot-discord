@@ -40,6 +40,14 @@ async def boosef(ctx):
     await ctx.send(sefID + " https://www.youtube.com/watch?v=4Ds-oqOjUog")
 
 @bot.command()
+async def diesel(ctx):
+    await ctx.send('https://s1.webmshare.com/jRdK6.webm')
+
+@bot.command()
+async def dieselfarts(ctx):
+    await ctx.send('https://video.twimg.com/ext_tw_video/1031498604740005889/pu/vid/638x360/MU2urw3oGOKZc8rE.mp4?tag=5')
+
+@bot.command()
 async def flip(ctx):
     result = 'ERROR'
     flip = random.randint(0, 1)
@@ -49,10 +57,6 @@ async def flip(ctx):
         result = "Tails"
 
     await ctx.send(result)
-
-@bot.command()
-async def diesel(ctx):
-    await ctx.send('https://s1.webmshare.com/jRdK6.webm')
 
 @bot.command()
 async def info(ctx):
@@ -79,7 +83,8 @@ async def help(ctx):
     embed.add_field(name=(cmdPrefix + "cat"), value="Its a cat", inline=False)
     embed.add_field(name=(cmdPrefix + "boo"), value="Almost scares you", inline=False)
     embed.add_field(name=(cmdPrefix + "boosef"), value="Almost scares him", inline=False)
-    embed.add_field(name=(cmdPrefix + "diesel"), value="Gets his fuck on", inline=False)
+    embed.add_field(name=(cmdPrefix + "diesel"), value="He enters", inline=False)
+    embed.add_field(name=(cmdPrefix + "dieselfarts"), value="Don't use this one", inline=False)
     embed.add_field(name=(cmdPrefix + "flip"), value="Heads or tails?", inline=False)
     embed.add_field(name=(cmdPrefix + "info"), value="Gives a little info about the bot", inline=False)
     embed.add_field(name=(cmdPrefix + "help"), value="Gives this message", inline=False)
