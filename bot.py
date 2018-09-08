@@ -16,7 +16,6 @@ async def on_ready():
 
 @bot.command()
 async def test(ctx):
-	105043765512679424
     member_object = server.get_member_named('master-betty')
     await ctx.send(member_object.mention + " test complete")
 
