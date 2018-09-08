@@ -27,6 +27,10 @@ async def boo(ctx):
     await ctx.send("https://www.youtube.com/watch?v=4Ds-oqOjUog")
 
 @bot.command()
+async def boosef(ctx):
+    await ctx.send("@Sefyu#9231 https://www.youtube.com/watch?v=4Ds-oqOjUog")
+
+@bot.command()
 async def info(ctx):
     embed = discord.Embed(title="Comfy Bot", description=botDescription, color=0xeee657)
     
