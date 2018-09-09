@@ -12,6 +12,8 @@ botDescription = "Get comfy, have some coffee. Don't be straight"
 sefID = '<@105043765512679424>'
 bettyID = '<@105032168501198848>'
 
+print 'TESTING PLEASE WITNESS ME1'
+
 @bot.event
 async def on_ready():
     print('Logged in as')
@@ -93,5 +95,7 @@ async def help(ctx):
 
 from boto.s3.connection import S3Connection
 s3 = str(S3Connection(os.environ['bootyToken']))
+print s3
+print 'TESTING PLEASE WITNESS ME2'
 
 bot.run(s3)
