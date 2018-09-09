@@ -98,4 +98,4 @@ s3 = str(S3Connection(os.environ['bootyToken']))
 print s3
 print 'TESTING PLEASE WITNESS ME2'
 
-bot.run(s3)
+bot.run(s3[0]
