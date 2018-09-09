@@ -91,4 +91,7 @@ async def help(ctx):
 
     await ctx.send(embed=embed)
 
-bot.run('NDg3NzA4OTI1NzgxNzM3NDcy.DnTdTg.H3RhfajJpVw-nhzrpCplOSoXoxY')
+from boto.s3.connection import S3Connection
+s3 = S3Connection(os.environ['bootyToken'])
+
+bot.run(s3)
