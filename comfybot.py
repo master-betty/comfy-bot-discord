@@ -80,6 +80,7 @@ bot.remove_command('help')
 
 @bot.command()
 async def help(ctx):
+    print ('Sending Help')
     embed = discord.Embed(title=botTitle, description="Get Comfy. List of commands are:", color=0xeee657)
 
     embed.add_field(name=(cmdPrefix + "greet"), value="Gives a nice greet message", inline=False)
@@ -94,10 +95,11 @@ async def help(ctx):
 
     await ctx.send(embed=embed)
 
-from boto.s3.connection import S3Connection
-s3 = str(S3Connection(os.environ['bootyToken']))
-print (s3)
-print ('TESTING PLEASE WITNESS ME2')
+#from boto.s3.connection import S3Connection
+#s3 = str(S3Connection(os.environ['bootyToken']))
+#print (s3)
+#print ('TESTING PLEASE WITNESS ME2')
+
 discoToken = os.environ.get('bootyToken')
 
 bot.run(discoToken)
