@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import random
+import os
 
 cmdPrefix = '-'
 bot = commands.Bot(command_prefix=cmdPrefix)
@@ -93,9 +94,10 @@ async def help(ctx):
 
     await ctx.send(embed=embed)
 
-from boto.s3.connection import S3Connection
-s3 = str(S3Connection(os.environ['bootyToken']))
-print s3
-print 'TESTING PLEASE WITNESS ME2'
+#from boto.s3.connection import S3Connection
+#s3 = str(S3Connection(os.environ['bootyToken']))
+#print s3
+#print 'TESTING PLEASE WITNESS ME2'
+discoToken = os.environ.get('bootyToken')
 
-bot.run(s3[0]
+bot.run(discoToken)
