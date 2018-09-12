@@ -13,7 +13,7 @@ botDescription = "Get comfy, have some coffee. Don't be straight"
 sefID = '<@105043765512679424>'
 bettyID = '<@105032168501198848>'
 
-print 'TESTING PLEASE WITNESS ME1'
+print ('TESTING PLEASE WITNESS ME')
 
 @bot.event
 async def on_ready():
