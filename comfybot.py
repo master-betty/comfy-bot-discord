@@ -25,7 +25,8 @@ async def on_ready():
 ### Messy code to mess with yousef ###
 
 @bot.event
-async def on_message(message):
+async def on_message(message, *args):
+    print (*args)
     print (message)
     print (message.author)
     print (message.author.id)
@@ -38,7 +39,7 @@ async def on_message(message):
 
     if str(message.author.id) == bettyID:
         print ('self check success')
-        await client.send_message(message.channel, 'Echoing Betty')
+        #await client.send_message(message.channel, 'Echoing Betty')
     else:
         print(str(message.author.id))
         print(sefID)
