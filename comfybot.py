@@ -22,9 +22,27 @@ async def on_ready():
     print(bot.user.id)
     print('------')
 
+### Messy code to mess with yousef ###
+'''
+@bot.event
+async def on_message(message):
+    """
+    if "not" in message.author:
+       await bot.send_message(message.channel, 'yes')
+       message.author
+    """
+'''
+######################################
+
 @bot.command()
 async def test(ctx):
-    await ctx.send(bettyID + " https://www.youtube.com/watch?v=4Ds-oqOjUog")
+
+    print (message.author)
+    print (str(message.author)
+    if message.author == message.author:
+        print ('If Test success')
+    #await ctx.send(bettyID + " https://www.youtube.com/watch?v=4Ds-oqOjUog")
+    await ctx.send("Test Logging. Check the console")
 
 @bot.command()
 async def greet(ctx):
