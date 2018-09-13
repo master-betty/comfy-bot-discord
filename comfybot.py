@@ -20,27 +20,28 @@ async def on_ready():
     print('Logged in as')
     print(bot.user.name)
     print(bot.user.id)
-    print('------')
+    print('## ----------------- ##')
 
 ### Messy code to mess with yousef ###
-'''
+
 @bot.event
 async def on_message(message):
+    print (message)
+    print (message.author)
+    print (str(message.author))
+    if message.author == message.author:
+        print ('If Test success')
     """
     if "not" in message.author:
        await bot.send_message(message.channel, 'yes')
        message.author
     """
-'''
+
 ######################################
 
 @bot.command()
 async def test(ctx):
-
-    print (message.author)
-    print (str(message.author))
-    if message.author == message.author:
-        print ('If Test success')
+    print ('test command called')
     #await ctx.send(bettyID + " https://www.youtube.com/watch?v=4Ds-oqOjUog")
     await ctx.send("Test Logging. Check the console")
 
