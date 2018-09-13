@@ -38,7 +38,7 @@ async def on_message(message):
 async def test(ctx):
 
     print (message.author)
-    print (str(message.author)
+    print (str(message.author))
     if message.author == message.author:
         print ('If Test success')
     #await ctx.send(bettyID + " https://www.youtube.com/watch?v=4Ds-oqOjUog")
