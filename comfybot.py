@@ -60,11 +60,11 @@ async def on_message(message):
 '''
 
 
-    """
-    if "not" in message.author:
-       await bot.send_message(message.channel, 'yes')
-       message.author
-    """
+"""
+if "not" in message.author:
+   await bot.send_message(message.channel, 'yes')
+   message.author
+"""
 
 ######################################
 
