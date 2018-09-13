@@ -42,6 +42,21 @@ async def on_message(message):
         print(str(message.author.id))
         print(sefID)
 
+'''
+@bot.event
+async def on_message(message):
+    if message.author == bettyID:
+        if random.randint(1,20):
+            print 
+
+    if str(message.author.id) == bettyID:
+        print ('self check success')
+    else:
+        print(str(message.author.id))
+        print(sefID)
+'''
+
+
     """
     if "not" in message.author:
        await bot.send_message(message.channel, 'yes')
