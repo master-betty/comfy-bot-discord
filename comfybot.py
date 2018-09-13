@@ -36,8 +36,8 @@ async def on_message(message):
     if message.author == message.author:
         print ('If Test success')
 
-    if str(message.author.id) == sefID:
-        print ('yousef check success')
+    if str(message.author.id) == bettyID:
+        print ('self check success')
     else:
         print(str(message.author.id))
         print(sefID)
