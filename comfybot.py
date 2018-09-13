@@ -24,7 +24,7 @@ async def on_ready():
 
 ### Messy code to mess with yousef ###
 
-@client.event
+@bot.event
 async def on_message(message, *args):
     print (*args)
     print (message)
@@ -72,6 +72,7 @@ if "not" in message.author:
 
 @bot.command()
 async def test(ctx):
+    print (ctx)
     print ('test command called')
     #await ctx.send('<@' + bettyID + '>' + " https://www.youtube.com/watch?v=4Ds-oqOjUog")
     await ctx.send("Test Logging. Check application log")
