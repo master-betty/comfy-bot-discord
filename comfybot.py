@@ -24,7 +24,7 @@ async def on_ready():
 
 ### Messy code to mess with yousef ###
 
-@bot.event
+@client.event
 async def on_message(message, *args):
     print (*args)
     print (message)
@@ -43,7 +43,6 @@ async def on_message(message, *args):
     else:
         print(str(message.author.id))
         print(sefID)
-        
     await bot.process_commands(message)
 
 
