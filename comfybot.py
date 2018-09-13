@@ -10,8 +10,8 @@ botTitle = "Comfy Bot"
 botDescription = "Get comfy, have some coffee. Don't be straight"
 
 #definitely find a better way to do this
-sefID = '<@105043765512679424>'
-bettyID = '<@105032168501198848>'
+sefID = '105043765512679424'
+bettyID = '105032168501198848'
 
 print ('TESTING PLEASE WITNESS ME')
 
@@ -28,9 +28,16 @@ async def on_ready():
 async def on_message(message):
     print (message)
     print (message.author)
+    print (message.author.id)
+    print (message.author.name)
+    print (message.author.nick)
     print (str(message.author))
     if message.author == message.author:
         print ('If Test success')
+
+    if message.author.id == sefID:
+        print ('yousef check success')
+
     """
     if "not" in message.author:
        await bot.send_message(message.channel, 'yes')
@@ -42,8 +49,8 @@ async def on_message(message):
 @bot.command()
 async def test(ctx):
     print ('test command called')
-    #await ctx.send(bettyID + " https://www.youtube.com/watch?v=4Ds-oqOjUog")
-    await ctx.send("Test Logging. Check the console")
+    #await ctx.send('<@' + bettyID + '>' + " https://www.youtube.com/watch?v=4Ds-oqOjUog")
+    await ctx.send("Test Logging. Check application log")
 
 @bot.command()
 async def greet(ctx):
@@ -59,7 +66,7 @@ async def boo(ctx):
 
 @bot.command()
 async def boosef(ctx):
-    await ctx.send(sefID + " https://www.youtube.com/watch?v=4Ds-oqOjUog")
+    await ctx.send('<@' + sefID + '>' + " https://www.youtube.com/watch?v=4Ds-oqOjUog")
 
 @bot.command()
 async def diesel(ctx):
