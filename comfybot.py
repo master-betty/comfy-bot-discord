@@ -43,6 +43,8 @@ async def on_message(message, *args):
     else:
         print(str(message.author.id))
         print(sefID)
+        
+    await bot.process_commands(message)
 
 
 
