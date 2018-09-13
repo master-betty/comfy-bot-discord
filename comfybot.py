@@ -38,9 +38,12 @@ async def on_message(message):
 
     if str(message.author.id) == bettyID:
         print ('self check success')
+        await bot.send_message(message.channel, 'Echoing Betty')
     else:
         print(str(message.author.id))
         print(sefID)
+
+
 
 '''
 @bot.event
