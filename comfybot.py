@@ -29,14 +29,18 @@ async def on_message(message):
     print (message)
     print (message.author)
     print (message.author.id)
+    print (type(message.author.id))
     print (message.author.name)
     print (message.author.nick)
     print (str(message.author))
     if message.author == message.author:
         print ('If Test success')
 
-    if message.author.id == sefID:
+    if str(message.author.id) == sefID:
         print ('yousef check success')
+    else:
+        print(str(message.author.id))
+        print(sefID)
 
     """
     if "not" in message.author:
