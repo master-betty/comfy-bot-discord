@@ -82,6 +82,10 @@ async def greet(ctx):
     await ctx.send(":smiley: :wave: Hello, there!")
 
 @bot.command()
+async def greet2(ctx):
+    await ctx.send(":smiley: :wave: Hello, there!")
+
+@bot.command()
 async def cat(ctx):
     await ctx.send("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")
 
@@ -102,7 +106,7 @@ async def dieselfarts(ctx):
     await ctx.send('https://video.twimg.com/ext_tw_video/1031498604740005889/pu/vid/638x360/MU2urw3oGOKZc8rE.mp4?tag=5')
 
 @bot.command()
-async def flip2(ctx):
+async def flip(ctx):
     result = 'ERROR'
     flip = random.randint(0, 1)
     if (flip == 0):
@@ -135,7 +139,7 @@ async def test2(ctx):
 
 @bot.command()
 async def test3(ctx):
-    await bot.say('{} testing new commands.'.format(member.mention))
+    await ctx.send(":smiley: :wave: Hello, there!")
 
 #await mute(ctx, user, reason or "treason") # uses the mute function
 
