@@ -135,7 +135,10 @@ async def testMute1(ctx, member : discord.Member = None):
 ###  THIS ONE #####
 @bot.command()
 async def test2(ctx):
-    await bot.say('{} testing new commands.'.format(member.mention))
+    try:
+        await bot.say('{} testing new commands.'.format(member.mention))
+    except:
+        await ctx.send("You fucked up")
 
 @bot.command()
 async def test3(ctx):
