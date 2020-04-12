@@ -136,7 +136,7 @@ async def testMute1(ctx, member : discord.Member = None):
 @bot.command()
 async def test2(ctx):
     try:
-        await bot.send('WHY WONT THIS WORK AHHH')
+        await ctx.send('WHY WONT THIS WORK AHHH')
     except:
         await ctx.send("You fucked up")
 
@@ -152,11 +152,11 @@ async def test3(ctx):
 @bot.command()
 async def test4(ctx):
     try:
-        await bot.server_voice_state(bettyID ,mute=True)
+        await ctx.server_voice_state(bettyID ,mute=True)
     except:
         await ctx.send("You fucked up")
     try:
-        await bot.say('{} has been muted.'.format(member.mention))
+        await ctx.say('{} has been muted.'.format(member.mention))
     except:
         await ctx.send("You fucked the mute up")
 
