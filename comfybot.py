@@ -143,9 +143,9 @@ async def test2(ctx):
 @bot.command()
 async def test3(ctx):
     try:
-        await ctx.send(":smiley: :wave: Hello, there!")
+        await ctx.send('Hello, there!')
     except:
-        await ctx.send("That shouldbe worked")
+        await ctx.send("That shouldve worked")
 
 #await mute(ctx, user, reason or "treason") # uses the mute function
 
