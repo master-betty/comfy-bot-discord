@@ -1,1 +1,1 @@
-py -3 -m pip install -U discord.py==1.2.2
+pip install -U discord.py==1.2.2
