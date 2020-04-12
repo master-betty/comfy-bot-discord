@@ -112,6 +112,44 @@ async def flip(ctx):
 
     await ctx.send(result)
 
+############################################################################################################################################################################################
+# MAFIA SHIT
+############################################################################################################################################################################################
+'''
+@bot.command()
+async def testMute1(ctx, member : discord.Member = None):
+    member = bettyID
+
+    if member is None:
+        await ctx.send('Please pass in a valid user')
+        return
+
+    await member.add_roles('ROLE OBJECT HERE', **optional kwargs)
+
+    await ctx.send(f'{str(member)} was muted!')
+'''
+###  THIS ONE #####
+@bot.command()
+async def testMute2(member: discord.Member = bettyID):
+    await bot.server_voice_state(member,mute=True)
+    await bot.say('{} has been muted.'.format(member.mention))
+
+'''
+@bot.command()
+async def testMute3(ctx):
+    result = 'ERROR'
+    flip = random.randint(0, 1)
+    if (flip == 0):
+        result = "Heads"
+    elif (flip == 1):
+        result = "Tails"
+
+    await ctx.send('Muted Mafia Channel')
+'''
+
+############################################################################################################################################################################################
+############################################################################################################################################################################################
+
 @bot.command()
 async def info(ctx):
     embed = discord.Embed(title="Comfy Bot", description=botDescription, color=0xeee657)
@@ -134,7 +172,7 @@ async def help(ctx):
     print ('Sending Help')
     embed = discord.Embed(title=botTitle, description="Get Comfy. List of commands are:", color=0xeee657)
 
-    embed.add_field(name=(cmdPrefix + "greet"), value="Gives a nice greet message", inline=False)
+    #embed.add_field(name=(cmdPrefix + "greet"), value="Gives a nice greet message", inline=False)
     embed.add_field(name=(cmdPrefix + "cat"), value="Its a cat", inline=False)
     embed.add_field(name=(cmdPrefix + "boo"), value="Almost scares you", inline=False)
     embed.add_field(name=(cmdPrefix + "boosef"), value="Almost scares him", inline=False)
