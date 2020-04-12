@@ -130,13 +130,18 @@ async def testMute1(ctx, member : discord.Member = None):
 '''
 ###  THIS ONE #####
 @bot.command()
-async def testMute2(member: discord.Member = bettyID):
+async def test2(ctx):
+    await bot.say('{} testing new commands.'.format(member.mention))
+
+@bot.command()
+async def testMute2(ctx, member: discord.Member = bettyID):
     await bot.server_voice_state(member,mute=True)
     await bot.say('{} has been muted.'.format(member.mention))
 
+
 '''
 @bot.command()
-async def testMute3(ctx):
+async def testMute4(ctx):
     result = 'ERROR'
     flip = random.randint(0, 1)
     if (flip == 0):
