@@ -152,11 +152,11 @@ async def test3(ctx):
 @bot.command()
 async def test4(ctx):
     try:
-        await ctx.server_voice_state(bettyID ,mute=True)
+        await ctx.server_voice_state(105032168501198848 ,mute=True)
     except:
         await ctx.send("You fucked up")
     try:
-        await ctx.say('{} has been muted.'.format(member.mention))
+        await ctx.send('{} has been muted.'.format(105032168501198848.mention))
     except:
         await ctx.send("You fucked the mute up")
 
