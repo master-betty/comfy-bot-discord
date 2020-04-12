@@ -148,7 +148,7 @@ async def test3(ctx):
         await ctx.send("That shouldve worked")
 
 #await mute(ctx, user, reason or "treason") # uses the mute function
-
+# THIS KILLS THE BOT FNCTIONS ###
 @bot.command()
 async def test4(ctx):
     try:
@@ -156,7 +156,7 @@ async def test4(ctx):
     except:
         await ctx.send("You fucked up")
     try:
-        await ctx.send('{} has been muted.'.format(105032168501198848.mention))
+        await ctx.send('{} has been muted.'.format(''))
     except:
         await ctx.send("You fucked the mute up")
 
