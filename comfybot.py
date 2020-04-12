@@ -136,7 +136,7 @@ async def testMute1(ctx, member : discord.Member = None):
 @bot.command()
 async def test2(ctx):
     try:
-        await bot.say('{} testing new commands.'.format(member.mention))
+        await bot.say('{} testing new commands.'.format(bettyID))
     except:
         await ctx.send("You fucked up")
 
@@ -147,9 +147,15 @@ async def test3(ctx):
 #await mute(ctx, user, reason or "treason") # uses the mute function
 
 @bot.command()
-async def testMute2(ctx, member: discord.Member = bettyID):
-    await bot.server_voice_state(member,mute=True)
-    await bot.say('{} has been muted.'.format(member.mention))
+async def test4(ctx):
+    try:
+        await bot.server_voice_state(bettyID,mute=True)
+    except:
+        await ctx.send("You fucked up")
+    try:
+        await bot.say('{} has been muted.'.format(member.mention))
+    except:
+        await ctx.send("You fucked the mute up")
 
 
 '''
